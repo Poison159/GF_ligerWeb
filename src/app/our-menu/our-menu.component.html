@@ -1,0 +1,25 @@
+<link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"/>
+
+<br/>
+<br/>
+<div class="jumbotron" style="height: 70px;">
+    <h2 style="text-align: center; color:#333333;">{{title}}</h2>
+</div>
+
+<div *ngFor="let res of dict | keyvalue">
+    <h6 style="text-align: center; margin: auto;">{{res.key}}</h6>
+    <hr/>
+    <div class="row">
+        <div class="col-md-3" *ngFor="let meal of res.value">
+            <div  class="card">
+                <img class="card-img-top" style="width: 50%; height: 50%; margin: auto;" src={{meal.imgPath}}/>
+                <div class="card-body">
+                    <h4>{{meal.name}}</h4>
+                    <p style="word-wrap: break-word;">{{meal.description}}</p>
+                    <p>R{{meal.price}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

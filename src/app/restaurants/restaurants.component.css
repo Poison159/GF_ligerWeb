@@ -1,0 +1,23 @@
+.card{
+    border: none;
+    background-color:transparent;
+}
+
+.zoom {
+    transition: transform .2s; /* Animation */ 
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+  .main-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1,h2,h3,h4,p{
+    color:#333333
+  }

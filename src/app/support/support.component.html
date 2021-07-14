@@ -1,0 +1,77 @@
+<link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"/>
+<br/>
+<br/>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div style="margin: auto;">
+            <button style="background-color: #fd7e14; margin: auto; width: 100%;" class="btn" (click)="setHowTrue()">How to scan qr code</button>
+            <hr/>
+            <div *ngIf="howHidden" color="liger">
+                <p style="color: #333333; margin: auto;"> Step 1: Click scan code on the app main page</p>
+                <hr/>
+                <p style="color: #333333; margin: auto;"> Step 2: Put the QR Code in the middle of the camera scope</p>
+                <hr/>
+                <p style="color: #333333; margin: auto;"> Step 3: Wait for the menu to load</p>
+                <hr/>
+                <p style="color: #333333; margin: auto;"> Step 4: Go through the different tabs of the menu</p>
+            </div>
+        </div>
+        <div style="margin: auto;">
+            <button style="color: #333333; margin: auto; width: 100%;background-color: #fd7e14;" (click)="setFreqAskedTrue()" class="btn">Frequently asked questions</button>
+            <hr/>
+            <div *ngIf="freqAskedHidden">
+                <div class="card">
+                    <div class="card-title"><h6 style="text-align: center; color: #FFFFFF;">I forgot my password</h6></div>
+                    <div class="card-body">
+                       <p style="color: #FFFFFF"> You can reset your password from the app. Please click on forgot password and I forgot my password follow the prompts to reset your password. If you are still having issues, please email us on info@liger.co.za and we will help resolve this for you.</p>
+                    </div>
+                </div>
+                <hr/>
+                <div class="card">
+                    <div class="card-title" ><h6 style="text-align: center; color:#FFFFFF">How do update my account information</h6></div>
+                    <div class="card-body">
+                        <p style="color: #FFFFFF">From the app, click on the main menu in the top left and click on profile. From here you can view and update your account information, as well as to delete your account if you need to.</p>
+                    </div>
+                </div>
+                <hr/>
+                <div class="card">
+                    <div class="card-title" ><h6 style="text-align: center; color:#FFFFFF">How can I get my restaurant listed on LIGER?</h6></div>
+                    <div class="card-body">
+                        <p style="color: #FFFFFF">Please email us at thato@liger.co.za to enquire about listings. Thanks for getting in touch with Liger.</p>
+                    </div>
+                </div>
+                <hr/>
+                <div class="card">
+                    <div class="card-title" ><h6 style="text-align: center;color:#FFFFFF">I want to unsubscribe from emails</h6></div>
+                    <div class="card-body">
+                        <p style="color: #FFFFFF">To unsubscribe from marketing emails, you can click the unsubscribe link at the bottom of any marketing email you have received.</p>
+                    </div>
+                </div>
+                <hr/>
+                <div class="card">
+                    <div class="card-title" ><h6 style="text-align: center; color:#FFFFFF">How do I know if you service my area?</h6></div>
+                    <div class="card-body">
+                        <p style="color: #FFFFFF">All you have to do is go to the search tab on the main menu to see all the restaurants within a 10-kilometer radius from your location.</p>
+                    </div>
+                </div>
+                <hr/>
+            </div>
+        </div>
+        <button style="color: #333333; margin: auto; width: 100%;background-color: #fd7e14;"  class="btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+              </svg>
+            info@liger.co.za
+        </button>
+        <br/>
+        <br/>
+        <button style="color: #333333; margin: auto; width: 100%;background-color: #fd7e14;"  class="btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+              </svg>
+            011-625-6588
+        </button>
+    </div>
+    <div class="col-md-4"></div>
+</div>
