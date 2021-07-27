@@ -16,6 +16,7 @@ export class RestaurantsComponent implements OnInit {
    public user: any;
    public username = "";
    public temp : any;
+   public logo = '../../assets/imgs/icon.png'
 
   constructor(private resturantServ:RestaurantsService, 
     private router: Router,private route:ActivatedRoute,private spinner: NgxSpinnerService) {

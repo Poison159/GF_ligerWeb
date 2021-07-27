@@ -48,6 +48,8 @@
         </svg>
         {{branch.address}}
     </p>
+    
+    <br/>
     <div class=row>
         <div class="col-md-3"></div>
         <div class="col-md-6">
@@ -100,22 +102,26 @@
 <br/>
 
 <div  class="row">
-    <div *ngIf="branch.reviews.length !== 0" style="padding-left: 20px;" class="col-md-6">
-        <h6 >Reviews</h6>
-        <hr/>
-        <div *ngFor="let review of branch.reviews">
-            <p style="zoom: 1.1; font-weight: bold;"> {{review.username}}</p>
-            <ngb-rating style="color: gold;" [max]="5" [(rate)]="review.rating" (rateChange)="onRateChange($event,branch.id)" [readonly]="false"></ngb-rating>
-            <p>{{review.comment}}</p>
+    <div *ngIf="branch.reviews.length !== 0" style="padding-left: 20px;" class="col-md-4">
+        
+        
+        <div class="card">
+            <h6 class="card-header" >Reviews</h6>
+            <div *ngFor="let review of branch.reviews">
+                <p style="zoom: 1.1; font-weight: bold;"> {{review.username}}</p>
+                <ngb-rating style="color: gold;" [max]="5" [(rate)]="review.rating" (rateChange)="onRateChange($event,branch.id)" [readonly]="false"></ngb-rating>
+                <p>{{review.comment}}</p>
+            </div>
         </div>
+        
     </div>
-    <div *ngIf="!already.includes(branch.id)" class="col-md-6">
+    <div *ngIf="!already.includes(branch.id)" class="col-md-4">
         <div *ngIf="!branch.open"  class="row">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">
-                        <h4>Add rating</h4>
-                    </div>
+                    
+                        <h6 class="card-header">Add rating</h6>
+                    
                     <div class="card-body">
                         <div class="card-title">
                         <ngb-rating style="color: gold;margin: auto;zoom:1.5"  [max]="5" [(rate)]="rating" [readonly]="false"></ngb-rating>

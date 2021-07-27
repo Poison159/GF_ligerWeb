@@ -11,9 +11,9 @@
         <div  class="card">
             <img class="card-img-top" style="width: 50%; height: 50%; margin: auto;" src={{meal.imgPath}}/>
             <div class="card-body">
-                <h4>{{meal.name}}</h4>
+                <h4 style="color: orange;">{{meal.name}}</h4>
                 <p style="word-wrap: break-word;">{{meal.description}}</p>
-                <p>R{{meal.price}}</p>
+                <p>R{{meal.price | number : '1.2-2'}}</p>
             </div>
             
         </div>
