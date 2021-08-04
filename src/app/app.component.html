@@ -366,14 +366,14 @@
   </ng-sidebar>
 
   <!-- Page content -->
-  <div style="background-image: url('../assets/imgs/liger_banner.jpg');background-size: cover;background-position: center center; height: 38.3px;" ng-sidebar-content>
+  <div style="background-image: url('../assets/imgs/nav-bar.jpg');background-size: cover;background-position: center center; height: 38.3px;" ng-sidebar-content>
     <!-- <img (click)="goHome()" style="width: 50px;height: 50px;" src={{imgPath}} /> -->
     <!-- <img  style="width: 50px;height: 50px;" src={{imgPath}} /> -->
     <svg (click)="_toggleSidebar()" style="zoom:2.0;color:#FFFFFF" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
     </svg>
     
-    <input *ngIf="username.length !== 0" style="border-radius: 5px; padding-right: 5px; float: right;" type="search" class="form-control col-md-3" placeholder="Search Restaurants" (search)="search()" [(ngModel)]="searchStr"  />
+    <input *ngIf="username.length !== 0" style="border-radius: 5px; padding-right: 15px; float: right; padding-top: 5px; zoom: 0.7;" type="search" class="form-control col-md-3" placeholder="Search Restaurants" (search)="search()" [(ngModel)]="searchStr"  />
     
     <router-outlet></router-outlet>
   </div>

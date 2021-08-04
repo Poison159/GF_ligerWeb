@@ -1,8 +1,7 @@
-
 .card{
-  border: none;
-  background-color: transparent;
-  
+    border: none;
+    background-color: transparent;
+    
 }
 .zoom {
     
@@ -22,4 +21,3 @@
     margin-right: auto;
     width: 50%;
   }
-  

@@ -9,6 +9,7 @@ import { OurMenuComponent } from './our-menu/our-menu.component';
 import { RegisterComponent } from './register/register.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { ResultsComponent } from './results/results.component';
+import { SeeAllComponent } from './see-all/see-all.component';
 import { SupportComponent } from './support/support.component';
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'support', component: SupportComponent},
   {path: 'our-menu', component: OurMenuComponent},
+  {path: 'see-all', component: SeeAllComponent},
   {path: '', component: AppComponent}
 ];
 

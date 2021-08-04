@@ -4,7 +4,9 @@ import { RestaurantsService } from 'src/services/restaurants.service';
 
 export const url = 'https://localhost:44376/';
 export const conUrl = 'https://weboneapp.conveyor.cloud/';
-
+//TODO: add logout
+//TODO: change rating on return
+//TODO: add search icon
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

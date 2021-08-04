@@ -21,6 +21,7 @@ import { OurMenuComponent } from './our-menu/our-menu.component';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalComponent } from './modal/modal.component';
+import { SeeAllComponent } from './see-all/see-all.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ModalComponent } from './modal/modal.component';
     ResultsComponent,
     SupportComponent,
     OurMenuComponent,
-    ModalComponent
+    ModalComponent,
+    SeeAllComponent
   ],
   imports: [
     BrowserModule,

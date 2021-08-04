@@ -22,7 +22,7 @@
     <div class="col-md-2" *ngFor="let cat of categories | keyvalue " >
         <div (click)="gotToOurMenu(cat)" class="card zoom">
             
-                <img class="card-img-top" style="width: 40%; height: 100%; margin: auto; " src={{cat.value[0].imgPath}} />
+                <img class="card-img-top" style="width: 40%; height: 100%; margin: auto;object-fit: cover; " src={{cat.value[0].imgPath}} />
             
             <div class="card-body">
                 <h6 style="text-align: center;">{{ucfirst(cat.key)}}</h6>
@@ -33,6 +33,7 @@
 </div>
 <hr/>
 <h5>Restaurants near you</h5>
+<a style="float: right; padding-right: 5px;" (click)="goToAll()">See all</a>
 <br/>
 <br/>
 <div class="row">  

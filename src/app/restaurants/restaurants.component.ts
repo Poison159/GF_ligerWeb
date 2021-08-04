@@ -60,6 +60,15 @@ export class RestaurantsComponent implements OnInit {
     return JSON.stringify(obj) === JSON.stringify({});
   }
 
+  goToAll(){
+    const navigationExtras: NavigationExtras = {
+      queryParams: {
+        branches: JSON.stringify(this.branches)
+      }
+    }
+    this.router.navigate(['see-all'],navigationExtras);
+  }
+
   getCategries(meals:any){
     if(Object.keys(this.categories).length !== 6){
       for (let key in meals) {
