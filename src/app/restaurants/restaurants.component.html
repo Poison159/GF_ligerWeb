@@ -4,8 +4,8 @@
 <div style="background-image: url('../../assets/imgs/liger_banner.jpg');background-size: cover;background-position: center center;height: 400px;">
     <br/>
     <img src="../../assets/imgs/icon.png" alt="Person" class="center" style="width: 200px; height: 200px;">
-    <h1 style="color:#FFFFFF;text-align: center;">Local flavors</h1>
-    <h1 style="color:#FFFFFF;text-align: center;">for every occasion</h1>
+    <h2 style="color:#FFFFFF;text-align: center;">Local flavors</h2>
+    <h2 style="color:#FFFFFF;text-align: center;">for every occasion</h2>
 </div>
 
 <ngx-spinner
@@ -16,13 +16,13 @@
 >
   <p style="font-size: 20px; color: white">Loading...</p>
 </ngx-spinner>
-
-<h5>Our menu</h5>
+<br/>
+<h5 style="padding-left:4px;">Our menu</h5>
 <div class="row">
     <div class="col-md-2" *ngFor="let cat of categories | keyvalue " >
         <div (click)="gotToOurMenu(cat)" class="card zoom">
             
-                <img class="card-img-top" style="width: 40%; height: 100%; margin: auto;object-fit: cover; " src={{cat.value[0].imgPath}} />
+                <img class="card-img-top" style="width: 51%; height: 89px; margin: auto;object-fit: cover; " src={{cat.value[0].imgPath}} />
             
             <div class="card-body">
                 <h6 style="text-align: center;">{{ucfirst(cat.key)}}</h6>
@@ -32,9 +32,8 @@
     </div>
 </div>
 <hr/>
-<h5>Restaurants near you</h5>
+<h5 style="padding-left:4px;">Restaurants near you</h5>
 <a style="float: right; padding-right: 5px;" (click)="goToAll()">See all</a>
-<br/>
 <br/>
 <div class="row">  
     <div  class="col-md-3" *ngFor="let branch of branches" (click)="goToCategory(branch.id)">

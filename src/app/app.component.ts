@@ -1,12 +1,12 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { RestaurantsService } from 'src/services/restaurants.service';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 export const url = 'https://localhost:44376/';
 export const conUrl = 'https://weboneapp.conveyor.cloud/';
-//TODO: add logout
+
 //TODO: change rating on return
-//TODO: add search icon
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -18,13 +18,16 @@ export class AppComponent implements OnInit {
   title = 'ligerWeb';
   restaurants : any;
   username='';
+  public closeResult = '';
   private branches = new Array<any>();
   public searchStr: any;
   _opened: boolean = false;
   
 
   constructor(private resturantServ:RestaurantsService, 
-    private router: Router, private elementRef: ElementRef) {
+    private router: Router, 
+    private elementRef: ElementRef,
+    private modalService: NgbModal) {
 
       
   }
@@ -89,6 +92,34 @@ export class AppComponent implements OnInit {
   }
   goToSupport(){
     this.router.navigate(['support']);
+  }
+
+  yes(){
+    localStorage.clear();
+    this.modalService.dismissAll();
+    this.router.navigate(['landing']);
+  }
+
+  no(){
+    this.modalService.dismissAll();
+  }
+
+  logout(content:any){
+      this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+      }, (reason) => {
+        this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return `with: ${reason}`;
+    }
   }
 
  checkRes(res: any){
