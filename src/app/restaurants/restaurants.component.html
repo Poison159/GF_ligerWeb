@@ -22,7 +22,7 @@
     <div class="col-md-2" *ngFor="let cat of categories | keyvalue " >
         <div (click)="gotToOurMenu(cat)" class="card zoom">
             
-                <img class="card-img-top" style="width: 51%; height: 89px; margin: auto;object-fit: cover; " src={{cat.value[0].imgPath}} />
+                <img class="card-img-top" style="width: 70%; height: 89px; margin: auto;object-fit: cover; " src={{cat.value[0].imgPath}} />
             
             <div class="card-body">
                 <h6 style="text-align: center;">{{ucfirst(cat.key)}}</h6>
@@ -39,7 +39,7 @@
     <div  class="col-md-3" *ngFor="let branch of branches" (click)="goToCategory(branch.id)">
         <div class="card zoom">
             
-            <img style="width:60%;height:120px;margin: auto;"  class="card-img-top" src={{branch.resturant.imgPath}} />
+            <img style="width:60%;height:89px;margin: auto;"  class="card-img-top" src={{branch.resturant.imgPath}} />
             
             
             <h3 style="text-align: center;" class="card-title">{{branch.name}}</h3>

@@ -82,7 +82,7 @@
     
     <div *ngIf="branch.branchMeals.length !== 0" class="col-md-2">
         <div (click)="details('Special')" class="card zoom">
-            <img class="card-img-top" style="width: 51%; height: 89px; margin: auto;" src={{branch.branchMeals[0].imgPath}} />
+            <img class="card-img-top" style="width: 51%; height: 89px; margin: auto; object-fit: cover;" src={{branch.branchMeals[0].imgPath}} />
             <div class="card-body">
                 <h4>Specials</h4>
             </div>
@@ -92,7 +92,7 @@
     
     <div  class="col-md-2" *ngFor="let cat of branch.resturant.categories" >
         <div (click)="details(cat)" class="card zoom">
-            <img class="card-img-top" style="width: 51%; height: 89px; margin: auto;" src={{branch.resturant.meals[cat][0].imgPath}} />
+            <img class="card-img-top" style="width: 70%; height: 89px; margin: auto; object-fit: cover;" src={{branch.resturant.meals[cat][0].imgPath}} />
             <div class="card-body">
                 <h4>{{cat}}</h4>
             </div>
