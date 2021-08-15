@@ -141,7 +141,11 @@ export class CategoriesComponent implements OnInit {
           this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
         });
       }else{
-        console.log(res.Error);
+        this.modalService.open(res.error, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+          this.closeResult = `Closed with: ${result}`;
+        }, (reason) => {
+          this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+        });
       }
     },async (error: any) => {
       alert('could not add reservation');
