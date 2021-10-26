@@ -12,22 +12,21 @@ export class UserService {
     private _localRegisterUrl     = this.Url + '/RegisterUser';
     private _localLoginUrl        = this.Url + '/CheckToken';
     private _localUserDataUrl     = this.Url + '/UserData';
-    private _changeNameUrl     = this.Url + '/ChangeName';
+    private _changeNameUrl        = this.Url + '/ChangeName';
 
     constructor(private _http: HttpClient){}
 
-    registerUser(name:any , email:any, mobileNumber:any, password:any): Observable<any> {
+    registerUser(formName:any , formEmail:any, mobileNumber:any, formPassword:any): Observable<any> {
         console.log('Registering user .....');
-        return this._http.get<any>(this._localRegisterUrl + '?name=' + name + '&email='
-        + email + '&mobileNumber=' + null + '&password=' + password);
+        return this._http.post<any>(this._localRegisterUrl,{name:formName,email: formEmail,mobileNumber:null,password:formPassword});
     }
 
-    Login(email: string,password: string): Observable<any> {
-      return this._http.get<any>(this._localLoginUrl + '?email=' + email + '&password=' + password) ;
+    Login(Useremail: string,Userpassword: string): Observable<any> {
+      return this._http.post<any>(this._localLoginUrl, {email: Useremail,password: Userpassword});
     }
 
     changeName(userId:any, name:any){
-      return this._http.get<any>(this._changeNameUrl + '?userId=' + userId + '&name=' + name) ;
+      return this._http.get<any>(this._changeNameUrl + '?userId=' + userId + '&name=' + name);
     }
 
 }
